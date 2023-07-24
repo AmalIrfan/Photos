@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    position: relative;
+}
+
+.page-content {
+    padding: 1rem;
+}
+
+.nav-bar {
+    background: linear-gradient(to bottom, #fff, #eee);
+    border-bottom: #8af 5px solid;
+    position: sticky;
+    width: 100vw;
+    height: fit-content;
+    top: 0;
+    left: 0;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    padding: .5rem;
+    margin: 0;
+    height: 100%;
+    gap: .5rem;
+}
+
+.link-btn {
+    display: block;
+    color: currentColor;
+    text-decoration: none;
+    background: linear-gradient(to bottom, #fff, #eee);
+    border: #b0e0ff 1px solid;
+    padding: 1rem;
+    transition: all .1s ease-in-out;
+}
+.link-btn:hover {
+    box-shadow: 1px 1px 1px 1px #0005;
+}

@@ -1,21 +1,8 @@
 {% extends 'base.html' %}
 
 {% block body %}
-
-<h1>Hello World</h1>
-
-<a id="htmx-link"
-   href="{% url 'index' %}"
-   hx-boost="true"
-   hx-target="#htmx-content"
-   hx-swap="outerHTML"
-  >home page</a>
-
-<p id="htmx-content"></p>
-
-<div hx-trigger="every 2s"
-     hx-get="{% url 'success' %}"
-     hx-swap="beforeend"
-    ></div>
-
+    {% include 'nav.html' %}
+    <main id="page-content" class="page-content">
+        {% include content %}
+    </main>
 {% endblock body %}
