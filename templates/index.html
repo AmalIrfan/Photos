@@ -1,5 +1,21 @@
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="shortcut icon" href="/static/drawing.svg" type="image/svg">
-<!-- <script src="https://unpkg.com/htmx.org@1.9.3"></script> -->
-<script src="/static/htmx.min.js"></script>
+{% extends 'base.html' %}
+
+{% block body %}
+
 <h1>Hello World</h1>
+
+<a id="htmx-link"
+   href="{% url 'index' %}"
+   hx-boost="true"
+   hx-target="#htmx-content"
+   hx-swap="outerHTML"
+  >home page</a>
+
+<p id="htmx-content"></p>
+
+<div hx-trigger="every 2s"
+     hx-get="{% url 'success' %}"
+     hx-swap="beforeend"
+    ></div>
+
+{% endblock body %}
